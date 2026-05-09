@@ -11,6 +11,16 @@ The tool offers options for multithreading, enabling faster execution when deali
 
 ![Demo](demo.gif)
 
+
+## Installation
+```bash
+  sudo apt install python3.8 #you can skip this if python is already insatlled
+  git clone https://github.com/realpnut/Kapuut
+  cd Kapuut
+  chmod +x install.sh
+  ./install.sh
+```
+
 ## Disclaimer
 Use in educational and/or legal purposes only. Proceed with caution
 ## License
