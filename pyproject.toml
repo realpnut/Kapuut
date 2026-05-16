@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[project]
+name = "kapuut"
+version = "0.1.0"
+authors = [
+    { name="Peanut", email="pnutvacation@gmail.com" },
+]
+description = "A basic kahoot flooder"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "selenium"
+]
+
+[project.scripts]
+kapuut = "main:main"
+
+[project.urls]
+"Homepage" = "https://github.com/realpnut/Kapuut"
+"Bug Tracker" = "https://github.com/realpnut/Kapuut/issues"
