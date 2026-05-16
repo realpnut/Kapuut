@@ -7,33 +7,9 @@ from concurrent.futures import ThreadPoolExecutor
 import time
 import os
 
-os.system('cls' if os.name == 'nt' else 'clear')
-
 GREEN = "\033[92m"
 RED = "\033[91m"
 RESET = "\033[0m"
-
-filename = "uses.txt"
-if not os.path.exists(filename):
-    with open(filename, "w") as f:
-        f.write("1")
-with open(filename, "r") as f:
-    value = f.read().strip()
-if value == "1":
-    print(f"{RED} THIS TOOL IS MADE FOR LEGAL AND ETHICAL PURPOSES ONLY. PROCEED AT YOUR OWN RISK.{RESET}")
-    input("Press enter to continue.")
-    new_value = str(int(value) + 1)
-    with open(filename, "w") as f:
-        f.write(new_value)
-
-print("""
-██ ▄█▀  ▄▄▄  ▄▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄▄▄ 
-████   ██▀██ ██▄█▀ ██ ██ ██ ██   ██   
-██ ▀█▄ ██▀██ ██    ▀███▀ ▀███▀   ██   
-                     The best Kahoot nuker ever!
-                     
-Press CTRL+C to close.
-""")
 
 def join_kahoot(code, base_name, number):
     options = Options()
@@ -50,7 +26,6 @@ def join_kahoot(code, base_name, number):
 
     driver = webdriver.Chrome(options=options)
     wait = WebDriverWait(driver, 10)
-
     nickname = f"{base_name}_{number}" 
 
     try:
@@ -59,7 +34,6 @@ def join_kahoot(code, base_name, number):
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button__Button-sc-vzgdbz-0"))).click()
         wait.until(EC.visibility_of_element_located((By.NAME, "nickname"))).send_keys(nickname) 
         wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "button__Button-sc-vzgdbz-0"))).click()
-
         print(f"{GREEN}[+] Joined: {nickname}{RESET}")
     except Exception as e:
         print(f"{RED}[-] Error for {nickname}: {e}{RESET}")
@@ -67,19 +41,51 @@ def join_kahoot(code, base_name, number):
         time.sleep(2)
         driver.quit()
 
-code = input("Join code: ")
-name = input("Name: ")
-multi = input("Multithreading (Y/N)?: ").strip().upper()
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-if multi == "Y":
-    threads = int(input("How many threads?: "))
-    total = int(input("How many bots?: "))
+    home_dir = os.path.expanduser("~")
+    config_dir = os.path.join(home_dir, ".config", "kapuut")
+    os.makedirs(config_dir, exist_ok=True)
+    filename = os.path.join(config_dir, "uses.txt")
 
-    with ThreadPoolExecutor(max_workers=threads) as executor:
-        for i in range(1, total + 1):
-            executor.submit(join_kahoot, code, name, i)
-else:
-    n = 1
-    while True:
-        join_kahoot(code, name, n)
-        n += 1
+    if not os.path.exists(filename):
+        with open(filename, "w") as f:
+            f.write("1")
+    with open(filename, "r") as f:
+        value = f.read().strip()
+    if value == "1":
+        print(f"{RED} THIS TOOL IS MADE FOR LEGAL AND ETHICAL PURPOSES ONLY. PROCEED AT YOUR OWN RISK.{RESET}")
+        input("Press enter to continue.")
+        new_value = str(int(value) + 1)
+        with open(filename, "w") as f:
+            f.write(new_value)
+
+    print("""
+██ ▄█▀  ▄▄▄  ▄▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄▄▄ 
+████   ██▀██ ██▄█▀ ██ ██ ██ ██   ██   
+██ ▀█▄ ██▀██ ██    ▀███▀ ▀███▀   ██   
+                     The best Kahoot nuker ever!
+                     
+Press CTRL+C to close.
+""")
+
+    code = input("Join code: ")
+    name = input("Name: ")
+    multi = input("Multithreading (Y/N)?: ").strip().upper()
+
+    if multi == "Y":
+        threads = int(input("How many threads?: "))
+        total = int(input("How many bots?: "))
+
+        with ThreadPoolExecutor(max_workers=threads) as executor:
+            for i in range(1, total + 1):
+                executor.submit(join_kahoot, code, name, i)
+    else:
+        n = 1
+        while True:
+            join_kahoot(code, name, n)
+            n += 1
+
+if __name__ == "__main__":
+    main()
