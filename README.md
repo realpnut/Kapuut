@@ -14,13 +14,19 @@ The tool offers options for multithreading, enabling faster execution when deali
 
 ## Installation
 
+### Via pip
+```bash
+pip install kapuut
+kapuut
+```
+
 ### Via pipx (Recommended)
 ```bash
 pipx install kapuut
 kapuut
 ```
 
-### Manually (if pipx fails)
+### Manually (if pip and pipx fails)
 ```bash
 git clone https://github.com/realpnut/Kapuut.git
 cd Kapuut
