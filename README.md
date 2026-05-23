@@ -1,3 +1,5 @@
+plz give me stars 🙏🙏🙏
+
 # Kapuut - kahoot nuker
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen)
