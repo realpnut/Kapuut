@@ -1,3 +1,4 @@
+now with wayground support!
 plz give me stars 🙏🙏🙏
 
 # Kapuut - kahoot nuker
@@ -7,6 +8,7 @@ plz give me stars 🙏🙏🙏
 A simple nuker that creates bots on Kahoot to flood a game session.
 
 The tool offers options for multithreading, enabling faster execution when dealing with large-scale bot creation.
+Can also flood wayground (quizziz) lobbies
 
 ## Demonstration
 
