@@ -135,7 +135,8 @@ def quizizz_flood():
 def main():
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("""               ██ ▄█▀ ▄▄▄ ▄▄▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄▄▄ https://
+        print("""
+                                ██ ▄█▀ ▄▄▄ ▄▄▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄▄▄ https://
                                 ████ ██▀██ ██▄█▀ ██ ██ ██ ██ ██    github.com/
                                 ██ ▀█▄ ██▀██ ██ ▀███▀ ▀███▀ ██     realpnut/Kapuut
                                 +------------------------------------------------+
