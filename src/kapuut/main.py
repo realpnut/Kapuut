@@ -134,8 +134,15 @@ def quizizz_flood():
 
 def main():
     while True:
-        print(""" 1 - kahoot flood
-        2 - wayground floor""")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("""               ██ ▄█▀ ▄▄▄ ▄▄▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄▄▄ https://
+                                ████ ██▀██ ██▄█▀ ██ ██ ██ ██ ██    github.com/
+                                ██ ▀█▄ ██▀██ ██ ▀███▀ ▀███▀ ██     realpnut/Kapuut
+                                +------------------------------------------------+
+                                |        1. Kahoot flooder                       |
+                                |        2. Wayground (quizziz) flooder          |
+                                |        0. Exit                                 |
+                                +------------------------------------------------+""")
         choice = input("\nChoose option: ").strip()
         if choice == "1":
             kahoot_flood()
