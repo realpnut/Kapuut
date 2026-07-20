@@ -1,6 +1,4 @@
-now with wayground support!
-gui coming when im feelin motivated
-plz give me stars 🙏🙏🙏
+there will be graphical user interface once im motivated
 
 # Kapuut - kahoot nuker
 
