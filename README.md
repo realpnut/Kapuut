@@ -4,7 +4,7 @@ there will be graphical user interface once im motivated
 
 # Kapuut - kahoot nuker
 
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![License](https://img.shields.io/badge/license-MIT-blue) ![Status](https://img.shields.io/badge/status-fixing-yellow)
 
 A simple nuker that creates bots on Kahoot to flood a game session.
 
